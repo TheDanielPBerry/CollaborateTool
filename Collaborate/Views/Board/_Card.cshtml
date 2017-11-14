@@ -1,0 +1,11 @@
+﻿@model CollaborateDataAccessLayer.Card
+
+<div class="CardContainer" id="card-@Model.IDCard">
+    <input type="hidden" class="CardId" value="@Model.IDCard" />
+    <span class="glyphicon glyphicon-trash delete-card-link" onmousedown="DeleteCard(@Model.IDCard, this)" onmouseover="ToggleColumnMove(false)" onmouseout="ToggleColumnMove(true)"></span>
+    <p class="CardTitle">@Model.Name <span class="delete-card-link glyphicon glyphicon-pencil" style="float:none;" onmousedown="OpenModal('@Url.Action("EditCard", "Board")', {id:@Model.IDCard})"></span></p>
+    <p class="CardDescription"><pre>@Model.Description</pre></p>
+    <p style="text-align:right;">
+        <span class="story-points-indicator">@Model.Points</span>
+    </p>
+</div>

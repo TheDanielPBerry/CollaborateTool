@@ -1,0 +1,18 @@
+﻿@model List<CollaborateDataAccessLayer.Conversation>
+
+<div class="TeamList">
+
+    <h4>Your Chats</h4>
+    @foreach (var convo in Model)
+    {
+        <div class="ChatEntry" onclick="OpenChat(@convo.IDConversation)">
+            @convo.Name
+        </div>
+    }
+</div>
+
+
+
+
+
+

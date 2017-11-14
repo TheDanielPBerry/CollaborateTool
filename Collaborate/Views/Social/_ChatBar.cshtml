@@ -1,0 +1,9 @@
+﻿@model Collaborate.Models.ChatViewModel
+
+<div class="ChatBar">
+    @foreach(var convo in Model.Conversations)
+    {
+        Html.RenderAction("ChatView", "Social", new { id = convo });
+    }
+</div>
+

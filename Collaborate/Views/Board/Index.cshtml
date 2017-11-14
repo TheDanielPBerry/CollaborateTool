@@ -1,0 +1,33 @@
+﻿@model CollaborateDataAccessLayer.Board
+@{
+    ViewBag.Title = Model.Name;
+}
+
+
+<table class="BoardContainer" style="background-color:@Model.Color">
+    <tr>
+        @foreach (CollaborateDataAccessLayer.BoardColumn Column in Model.BoardColumns.OrderBy(a => a.Priority))
+        {
+            Html.RenderPartial("_BoardColumn", Column);
+        }
+        <td id="RowInsert">
+            <div class="BoardColumnContainer">
+                <span style="color:black; padding:5px 10px; font-size:1.4em; margin:10px; background-color:lightgray; border:1px solid gray; cursor:pointer;" onclick="OpenModal('@Url.Action("CreateColumn", "Board", new { id=Model.IDBoard })');">
+                    +
+                </span>
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+<div class="modal-window">
+    <div class="modal-content-pane">
+        <span class="ExitModalButton glyphicon glyphicon-remove" onclick="CloseModal()" title="Cancel"></span>
+        <div class="ModalContent"></div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/BoardControl.js")
+}

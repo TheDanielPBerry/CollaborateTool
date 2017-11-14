@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collaborate", "Collaborate\Collaborate.csproj", "{113D902B-9887-4109-84B1-974636E4BAC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollaborateDAL", "CollaborateDAL\CollaborateDAL.csproj", "{B3EC9EB7-F658-46C4-B8D5-E885D597BAF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollaborateDataAccessLayer", "CollaborateDataAccessLayer\CollaborateDataAccessLayer.csproj", "{07BC3C9B-DEB1-4876-9609-67BD1DE652E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{113D902B-9887-4109-84B1-974636E4BAC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{113D902B-9887-4109-84B1-974636E4BAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{113D902B-9887-4109-84B1-974636E4BAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{113D902B-9887-4109-84B1-974636E4BAC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3EC9EB7-F658-46C4-B8D5-E885D597BAF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3EC9EB7-F658-46C4-B8D5-E885D597BAF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3EC9EB7-F658-46C4-B8D5-E885D597BAF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3EC9EB7-F658-46C4-B8D5-E885D597BAF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07BC3C9B-DEB1-4876-9609-67BD1DE652E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07BC3C9B-DEB1-4876-9609-67BD1DE652E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07BC3C9B-DEB1-4876-9609-67BD1DE652E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07BC3C9B-DEB1-4876-9609-67BD1DE652E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

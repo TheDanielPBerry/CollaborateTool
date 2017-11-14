@@ -1,0 +1,27 @@
+﻿@model CollaborateDataAccessLayer.Conversation
+
+<div class="ChatWindow">
+    <div class="ChatTitle" onclick="ToggleConversation(this)">@Model.Name <span class="glyphicon glyphicon-remove CloseChatButton" onclick="CloseChat(@Model.IDConversation, this)"></span></div>
+    <div class="ChatSection">
+        @foreach (var message in Model.Messages.OrderBy(a => a.Created))
+        {
+            if (message.UserID==Convert.ToInt32(Session["UserID"]))
+            {
+                <div class="MyMessageBubble">
+                    @message.Message1
+                </div>
+            } else {
+                <div class="MessageBubble">
+                    @message.Message1
+                </div>
+            }
+        }
+    </div>
+    @using (Ajax.BeginForm("PostMessage", "Social", new AjaxOptions() { }))
+    {
+        @Html.HiddenFor(model => model.IDConversation)
+        <input type="text" name="Message1" class="ChatInput" /><button type="submit" class="ChatButton"><span class="glyphicon glyphicon-send"></span></button>
+    }
+</div>
+
+

@@ -1,0 +1,28 @@
+﻿@model CollaborateDataAccessLayer.Card
+
+@using (Ajax.BeginForm("AddCard", "Board", new AjaxOptions { OnSuccess = "AddCard("+Model.ColumnID+", data)" }, htmlAttributes: new { @class = "form-horizontal container" }))
+{
+
+    @Html.HiddenFor(model => model.ColumnID)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "col-md-2" })
+        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control col-md-5", @maxlength = "40" } } )
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "col-md-2" })
+        @Html.TextAreaFor(model => model.Description, htmlAttributes: new { @class = "form-control col-md-5" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Points, htmlAttributes: new { @class = "col-md-2" })
+        @Html.DropDownListFor(model => model.Points, ViewBag.StoryPoints as List<SelectListItem>, htmlAttributes: new { @class= "form-control col-md-5" })
+    </div>
+
+
+    <div class="form-group">
+        <input type="submit" value="Add Card" class="btn btn-default" />
+    </div>
+}
+
+

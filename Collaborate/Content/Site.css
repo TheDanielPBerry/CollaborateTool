@@ -1,0 +1,227 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.BoardContainer {
+    width:100%;
+    overflow-y:visible;
+    overflow-x:scroll;
+    list-style-type:none;
+}
+.BoardContainer tr td {
+    vertical-align:top;
+}
+
+.BoardColumnContainer {
+    width:300px;
+    margin:4%;
+    padding:5px;
+    border:1px solid gray;
+    background:linear-gradient(darkgray, gray);
+}
+.ColumnTitle {
+    font-size:1.4em;
+    font-weight:bolder;
+    display:inline-block;
+    width:100%;
+}
+.MoveCardConfirmColumn:hover {
+    background:linear-gradient(gray, darkgray);
+}
+.CardContainer {
+    width:100%;
+    padding:5px;
+    margin-bottom:5px;
+    border:1px solid gray;
+    background-color:white;
+    display:list-item;
+    list-style-type:none;
+    cursor:-webkit-grab;
+}
+.CardContainer:active {
+    cursor:-webkit-grabbing;
+    max-width:290px;
+    transform:rotateZ(5deg);
+}
+.CardTitle {
+    font-weight:bold;
+    white-space:nowrap;
+}
+.modal-window {
+    display:none;
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    background-color:rgba(20,20,20,0.5);
+    top:0;
+    left:0;
+    z-index:200;
+}
+.modal-content-pane {
+    width:90%;
+    height:90%;
+    top:5%;
+    left:5%;
+    position:relative;
+    background-color:white;
+    border-radius:20px;
+    padding:2%;
+    overflow:scroll;
+}
+.AddCardButton {
+    cursor:pointer;
+    color:blue;
+    border:1px solid gray;
+    background-color:darkgray;
+    font-size:1.5em;
+    padding:4px 12px;
+    font-weight:bolder;
+}
+.AddCardButton:hover {
+    border:1px solid white;
+    background-color:gray;
+    font-size:1.5em;
+}
+.ExitModalButton {
+    color:white;
+    background-color:red;
+    padding:6px;
+    float:right;
+    cursor:pointer;
+    border-radius:6px;
+}
+.ExitModalButton {
+    color:white;
+    background-color:red;
+    padding:6px;
+    float:right;
+    cursor:pointer;
+    border-radius:6px;
+}
+
+.delete-card-link {
+    color:lightgray;
+    float:right;
+    cursor:pointer;
+    font-size:0.9em;
+}
+.delete-card-link:hover {
+    color:black;
+}
+.story-points-indicator  {
+    font-size:1.3em;
+    font-weight:bold;
+    color:white;
+    padding:3px;
+    border-radius:4px;
+    background-color:#0094ff;
+}
+
+pre {
+    white-space: pre-line;       /* Since CSS 2.1 */
+    white-space: -moz-pre-line;  /* Mozilla, since 1999 */
+    white-space: -pre-line;      /* Opera 4-6 */
+    white-space: -o-pre-line;    /* Opera 7 */
+}
+
+.ChatBar {
+    position:fixed;
+    top:96%;
+    height:4%;
+    background-color:gray;
+    width:100vw;
+    padding-right:30px;
+}
+
+.ChatWindow {
+    width:300px;
+    float:right;
+    border-left:1px solid white;
+    background-color:rgb(240,240,240);
+}
+
+.ChatTitle {
+    background-color:black;
+    color:white;
+    cursor:pointer;
+    padding:10px;
+}
+.CloseChatButton  {
+    color:gray;
+    float:right;
+}
+.CloseChatButton:hover  {
+    color:white;
+}
+
+.ChatSection {
+    height:350px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+
+.MessageBubble {
+    background-color:lightgray;
+    color:black;
+    border-radius:10px;
+    padding:10px;
+    margin:5px;
+    max-width:80%;
+    word-break:break-word;
+}
+.MyMessageBubble {
+    background-color:lightblue;
+    color:black;
+    border-radius:10px;
+    padding:10px;
+    margin:5px;
+    margin-left:20%;
+    max-width:80%;
+    word-break:break-word;
+}
+
+.ChatInput {
+    width:85%;
+}
+.ChatButton {
+    background-color:aqua;
+    color:white;
+    border-radius:6px;
+    border:1px solid rgba(100,100,100, 0.4);
+    padding:3px 8px;
+}
+
+
+.ChatEntry {
+    border:1px solid gray;
+    cursor:pointer;
+    padding:10px;
+}
+.ChatEntry:hover {
+    text-decoration:underline;
+}

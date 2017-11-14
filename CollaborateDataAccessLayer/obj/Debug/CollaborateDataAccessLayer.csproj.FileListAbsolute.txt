@@ -1,0 +1,12 @@
+C:\Users\d.berry\Documents\Visual Studio 2015\Projects\Collaborate\CollaborateDataAccessLayer\bin\Debug\CollaborateDataAccessLayer.dll.config
+C:\Users\d.berry\Documents\Visual Studio 2015\Projects\Collaborate\CollaborateDataAccessLayer\bin\Debug\CollaborateDataAccessLayer.dll
+C:\Users\d.berry\Documents\Visual Studio 2015\Projects\Collaborate\CollaborateDataAccessLayer\bin\Debug\CollaborateDataAccessLayer.pdb
+C:\Users\d.berry\Documents\Visual Studio 2015\Projects\Collaborate\CollaborateDataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\d.berry\Documents\Visual Studio 2015\Projects\Collaborate\CollaborateDataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\d.berry\Documents\Visual Studio 2015\Projects\Collaborate\CollaborateDataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\d.berry\Documents\Visual Studio 2015\Projects\Collaborate\CollaborateDataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\d.berry\Documents\Visual Studio 2015\Projects\Collaborate\CollaborateDataAccessLayer\obj\Debug\CollaborateDataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\d.berry\Documents\Visual Studio 2015\Projects\Collaborate\CollaborateDataAccessLayer\obj\Debug\CollaborateDataAccessLayer.dll
+C:\Users\d.berry\Documents\Visual Studio 2015\Projects\Collaborate\CollaborateDataAccessLayer\obj\Debug\CollaborateDataAccessLayer.pdb
+C:\Users\d.berry\Documents\Visual Studio 2015\Projects\Collaborate\CollaborateDataAccessLayer\bin\Debug\aspnet-Collaborate-20160617042256.mdf
+C:\Users\d.berry\Documents\Visual Studio 2015\Projects\Collaborate\CollaborateDataAccessLayer\bin\Debug\aspnet-Collaborate-20160617042256_log.ldf

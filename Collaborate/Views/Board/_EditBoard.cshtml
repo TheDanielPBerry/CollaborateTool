@@ -1,0 +1,26 @@
+﻿
+@model CollaborateDataAccessLayer.Board
+
+
+
+@{ 
+    var Columns = Model.BoardColumns.OrderBy(a => a.Priority).ToList();
+}
+
+<table>
+    @for (var i =0; i<Columns.Count(); i++)
+    {
+        <tr>
+            <td>
+                @Html.HiddenFor(model => Columns[i].IDColumn)
+                @Html.EditorFor(model => Columns[i].Name)
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+
+
+

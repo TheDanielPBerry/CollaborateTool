@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - TeamCollab</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <a class="navbar-brand" href="/Home/Index">Team Collab</a>
+                @{
+                    Html.RenderAction("LoginUser", "Social");
+                }
+
+            </div>
+        </div>
+    </div>
+    <div class="body-content">
+        @RenderBody()
+    </div>
+
+
+    @if (Convert.ToBoolean(Session["LoggedIn"]))
+    {
+        <div id="ChatBarContainer">
+            @{
+                Html.RenderAction("ChatBar", "Social");
+            }
+        </div>
+    }
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.min.js")
+    @if (Convert.ToBoolean(Session["LoggedIn"]))
+    {
+        @Scripts.Render("~/Scripts/ChatControl.js")
+    }
+    @RenderSection("scripts", required: false)
+</body>
+</html>

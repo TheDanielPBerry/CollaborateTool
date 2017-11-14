@@ -1,0 +1,15 @@
+﻿@model CollaborateDataAccessLayer.BoardColumn
+
+
+
+<td>
+    <div class="BoardColumnContainer" id="column-@Model.IDColumn">
+        <input type="hidden" value="@Model.IDColumn" class="ColumnId" />
+        <span class="ColumnTitle">@Model.Name</span>
+        @foreach (CollaborateDataAccessLayer.Card card in Model.Cards.OrderByDescending(a => a.Points))
+        {
+            Html.RenderPartial("_Card", card);
+        }
+        <span onclick="OpenModal('@Url.Action("CreateCard", "Board", new { id=Model.IDColumn })')" class="AddCardButton">+</span>
+    </div>
+</td>

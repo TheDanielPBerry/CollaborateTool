@@ -1,0 +1,33 @@
+﻿@model Collaborate.Models.TeamBuildViewModel
+
+<div style="padding:20px;">
+
+    <h4>Edit Your Team for "@Model.Board.Name"</h4>
+
+    @using (Html.BeginForm("SaveTeam", "Social"))
+    {
+        @Html.HiddenFor(model => model.Board.IDBoard)
+        <ul>
+            @for (var i = 0; i < Model.Users.Count(); i++)
+            {
+                <li>
+                    <label>
+                        @if (Model.UserId == Model.Users[i].IDUser)
+                        {
+                            @Html.EditorFor(model => model.Team[i], new { htmlAttributes = new {  @disabled="" } })
+                        }
+                        else
+                        {
+                            @Html.EditorFor(model => model.Team[i])
+                        }
+
+                        <span>@Model.Users[i].Username</span>
+                    </label>
+                </li>
+            }
+        </ul>
+
+        <input type="submit" value="Save Team" />
+    }
+
+</div>

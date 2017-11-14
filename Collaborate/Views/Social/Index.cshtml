@@ -1,0 +1,38 @@
+﻿@model CollaborateDataAccessLayer.User
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Your Boards";
+}
+
+<div class="container">
+    <div class="col-md-9">
+        <h4>Your Boards</h4>
+        @foreach (var board in Model.UserBoards)
+        {
+            Html.RenderAction("BoardShort", "Board", new { boardID = board.BoardID });
+        }
+        <div style="border:1px solid gray; background-color:white; padding:10px; font-size:1.5em; cursor:pointer; margin-top:20px;" onclick="OpenModal('@Url.Action("CreateBoard", "Board")')">
+            <span class="glyphicon glyphicon-plus-sign"></span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        @{
+            Html.RenderAction("ChatList", "Social");
+        }
+    </div>
+</div>
+
+
+
+<div class="modal-window">
+    <div class="modal-content-pane">
+        <span class="ExitModalButton glyphicon glyphicon-remove" onclick="CloseModal()" title="Cancel"></span>
+        <div class="ModalContent"></div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/BoardControl.js")
+}
